@@ -1,0 +1,7 @@
+Congrego is a set of scripts to automate live-build for building elementaryOS images.
+
+To build an elementaryOS image you'll need to:
+ 1) Make sure you have the dependencies installed (live-build livecd-rootfs syslinux-themes-ubuntu gfxboot-theme-ubuntu)
+ 2) Change your working directory to this folder
+ 3) Run build_all.sh, build_i386.sh or build_amd64.sh as root, depending on the type of build you want
+ 4) When done, your images will be in the builds folder

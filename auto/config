@@ -1,0 +1,70 @@
+#! /bin/sh
+set -e
+
+rm -rf config
+
+mkdir -p config/task-lists config/package-lists
+
+add_task ()
+{
+	local pass="$1"
+	shift
+	local task
+
+	for task; do
+		echo "$task" >> "config/task-lists/livecd-rootfs.chroot_$pass.list"
+	done
+}
+
+add_package ()
+{
+	local pass="$1"
+	shift
+	local pkg
+
+	for pkg; do
+		echo "$pkg" >> "config/package-lists/livecd-rootfs.chroot_$pass.list"
+	done
+}
+
+OPTS=
+COMPONENTS=
+BINARY_IMAGES=iso
+MEMTEST=memtest86+
+SOURCE='--source false'
+BOOTLOADER=syslinux
+
+add_task install minimal standard
+add_package live lupin-casper
+add_package install elementary-desktop elementary-standard elementary-minimal
+add_package live oem-config-gtk ubiquity-frontend-gtk
+COMPONENTS='main restricted universe multiverse'
+
+lb config noauto \
+    --architecture "$ARCH" \
+	--mode ubuntu \
+	--distribution "$SUITE" \
+	--bootstrap-keyring ubuntu-keyring \
+	--binary-images "$BINARY_IMAGES" \
+	--memtest "$MEMTEST" \
+	$SOURCE \
+	--build-with-chroot false \
+	${MIRROR:+--parent-mirror-bootstrap $MIRROR} \
+	${COMPONENTS:+--parent-archive-areas "$COMPONENTS"} \
+	--package-lists none \
+	${KERNEL_FLAVOURS:+--linux-flavours "$KERNEL_FLAVOURS"} \
+	--initsystem none \
+	--bootloader "$BOOTLOADER" \
+	--initramfs-compression gzip \
+	$OPTS
+
+ln -s /usr/share/live/build/examples/hooks/all_chroot_pyc-purge.sh config/chroot_local-hooks/
+cp auto/hooks/blacklist.sh config/chroot_local-hooks/
+cp auto/hooks/fix_lightdm.sh config/chroot_local-hooks/
+cp auto/hooks/fix_syslinux.sh config/binary_local-hooks/
+
+mkdir -p config/archives
+cp auto/archives/* config/archives/
+
+# temporary workaround
+sed 's/oneiric/precise/' -i config/binary
