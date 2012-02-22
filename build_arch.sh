@@ -13,6 +13,7 @@ done
 if [ "$missing_dependencies" != "" ]; then
 echo "Missing dependencies! Please install the following packages:
 $missing_dependencies" > /dev/stderr
+exit 1
 fi
 
 lb clean
