@@ -6,3 +6,4 @@ for package in $(cat 'platform.precise/blacklist' 'elementary-seeds.precise/blac
 apt-get -q -f -y autoremove "$package"
 done
 apt-get -q -f -y autoremove bzr
+rm -R elementary-seeds.precise platform.precise
