@@ -34,10 +34,8 @@ MEMTEST=memtest86+
 SOURCE='--source false'
 BOOTLOADER=syslinux
 
-add_task install minimal standard
-add_package live lupin-casper
-add_package install elementary-desktop elementary-standard elementary-minimal
-add_package live oem-config-gtk ubiquity-frontend-gtk
+add_package live lupin-casper oem-config-gtk ubiquity-frontend-gtk
+add_package install elementary-os-overlay elementary-desktop elementary-standard elementary-minimal
 COMPONENTS='main restricted universe multiverse'
 
 lb config noauto \
