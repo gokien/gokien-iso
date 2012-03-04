@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# check for root permissions
+if [ $(id -u) != 0 ]; then
+echo "Builds scripts need root permissions, but you don't seem to have them.
+Become a local god using sudo, then we'll work together to build the future." > /dev/stderr
+exit 1
+fi
+
 # accept ARCH as parameter; if none given, build i386
 export ARCH=${1:-'i386'}
 export SUITE=${SUITE:-'precise'}
