@@ -34,7 +34,7 @@ MEMTEST=memtest86+
 SOURCE='--source false'
 BOOTLOADER=syslinux
 
-add_package live lupin-casper ubiquity-frontend-gtk ubiquity-elementary-artwork plank-item-ubiquity
+add_package live lupin-casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork plank-item-ubiquity
 add_package install elementary-os-overlay elementary-desktop elementary-standard elementary-minimal
 COMPONENTS='main restricted universe multiverse'
 
