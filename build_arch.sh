@@ -27,6 +27,8 @@ fi
 renice '+15' $$
 ionice -t -n 7 -p $$
 
+mv cache_"$ARCH" cache
+
 lb clean
 lb config
 lb build
@@ -34,3 +36,5 @@ md5sum binary.iso > binary.iso.md5
 mkdir -p builds/`date +%Y%m%d`/$ARCH
 mv binary.* builds/`date +%Y%m%d`/$ARCH/
 rm livecd*
+
+mv cache cache_"$ARCH"
