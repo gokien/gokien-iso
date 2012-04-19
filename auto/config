@@ -45,7 +45,7 @@ BOOTLOADER=syslinux
 
 add_package live lupin-casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork plank-item-ubiquity
 add_package install elementary-os-overlay elementary-desktop elementary-standard elementary-minimal
-add_pool b43-fwcutter dkms efibootmgr libc6 lib32asound2 fakeroot grub-efi linux-wlan-ng linux-wlan-ng-doc lupin-support libglade2 mouseemu ndisgtk ndiswrapper-common ndiswrapper-utils patch python-glade2 setserial user-setup wvdial libuniconf4.6 libwvstreams4.6-base libwvstreams4.6-extras bcmwl-kernel-source sl-modem-daemon
+add_pool b43-fwcutter dkms efibootmgr libc6 fakeroot grub-efi linux-wlan-ng linux-wlan-ng-doc lupin-support mouseemu ndisgtk ndiswrapper-common ndiswrapper-utils-1.9 patch python-glade2 setserial user-setup wvdial libuniconf4.6 libwvstreams4.6-base libwvstreams4.6-extras bcmwl-kernel-source sl-modem-daemon
 COMPONENTS='main restricted universe multiverse'
 
 lb config noauto \
