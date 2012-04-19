@@ -27,6 +27,15 @@ add_package ()
 	done
 }
 
+add_pool ()
+{
+	local pkg="$1"
+
+	for pkg; do
+		echo "$pkg" >> "config/package-lists/livecd-rootfs.binary.list"
+	done
+}
+
 OPTS=
 COMPONENTS=
 BINARY_IMAGES=iso
