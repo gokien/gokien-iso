@@ -7,5 +7,4 @@ exit 1
 fi
 
 lb clean
-rm -R cache
-rm -R auto/functions auto/scripts
+rm -R cache_i386 cache_amd64 auto/functions auto/scripts
