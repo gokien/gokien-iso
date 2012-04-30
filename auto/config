@@ -71,7 +71,7 @@ cp auto/hooks/blacklist.sh config/chroot_local-hooks/
 cp auto/hooks/fix_lightdm.sh config/chroot_local-hooks/
 cp auto/hooks/fix_syslinux.sh config/binary_local-hooks/
 cp auto/hooks/set_info.sh config/binary_local-hooks/
-cp auto/hooks/pool_blacklist.sh config/binary_local-hooks/
+cp auto/hooks/pool_clean.sh config/binary_local-hooks/
 
 mkdir -p config/archives
 cp auto/archives/* config/archives/
