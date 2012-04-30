@@ -35,6 +35,6 @@ lb build
 md5sum binary.iso > binary.iso.md5
 mkdir -p builds/`date +%Y%m%d`/$ARCH
 mv binary.* builds/`date +%Y%m%d`/$ARCH/
-rm livecd*
+rm -f livecd*
 
 mv cache cache_"$ARCH"
