@@ -45,7 +45,7 @@ BOOTLOADER=syslinux
 
 add_package live lupin-casper ubiquity-frontend-gtk ubiquity-ubuntu-artwork plank-item-ubiquity
 add_package install elementary-os-overlay elementary-desktop elementary-standard elementary-minimal
-add_pool pptp-linux sl-modem-daemon ndiswrapper-utils-1.9 ndisgtk libatm1 setserial mouseemu b43-fwcutter bcmwl-kernel-source wvdial grub lupin-support
+add_pool pptp-linux sl-modem-daemon ndiswrapper-utils-1.9 ndisgtk libatm1 setserial mouseemu b43-fwcutter bcmwl-kernel-source wvdial grub lupin-support dkms fakeroot patch 
 COMPONENTS='main restricted universe multiverse'
 
 lb config noauto \
