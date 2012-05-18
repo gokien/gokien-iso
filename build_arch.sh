@@ -24,8 +24,8 @@ exit 1
 fi
 
 # We're a lengthy background process, so don't eat too much CPU and disk I/O
-renice '+15' $$
-ionice -t -n 7 -p $$
+renice '+15' $$ || true
+ionice -c 3 -p $$ || true
 
 mv cache_"$ARCH" cache
 
