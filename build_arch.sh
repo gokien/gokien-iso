@@ -27,6 +27,7 @@ fi
 renice '+15' $$ || true
 ionice -c 3 -p $$ || true
 
+rm -Rf cache
 mv cache_"$ARCH" cache
 
 lb clean
