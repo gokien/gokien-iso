@@ -1,2 +1,1 @@
-deb http://ppa.launchpad.net/midori/midori-dev/ubuntu precise main 
-deb-src http://ppa.launchpad.net/midori/midori-dev/ubuntu precise main 
+midori.binary.list
