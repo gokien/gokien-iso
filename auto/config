@@ -53,6 +53,7 @@ lb config noauto \
 	--mode ubuntu \
 	--distribution "$SUITE" \
 	--bootstrap-keyring ubuntu-keyring \
+    --syslinux-theme elementary-luna \
 	--binary-images "$BINARY_IMAGES" \
 	--memtest "$MEMTEST" \
 	$SOURCE \
@@ -75,8 +76,3 @@ cp auto/hooks/pool_clean.sh config/binary_local-hooks/
 
 mkdir -p config/archives
 cp auto/archives/* config/archives/
-
-# workaround for a bug in live-build in Precise
-if [ $(lsb_release -cs) = precise ]; then
-sed 's/oneiric/precise/' -i config/binary
-fi
