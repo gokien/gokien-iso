@@ -10,4 +10,5 @@ done
 
 for file in $(cat .latest_build_sourceforge_filenames); do
 ./generate_zsync_metafile.sh "$file"
+echo "$file"'.zsync' >> .latest_build_sourceforge_filenames
 done
