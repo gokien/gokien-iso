@@ -12,18 +12,17 @@ Read_conffiles config/all config/common config/bootstrap config/chroot config/bi
 Set_defaults
 
 (
-	if [ -d gnupg ]; then
-		cat << @@EOF > gnupg/NEWKEY
+	mkdir -p gnupg
+	cat << @@EOF > gnupg/NEWKEY
 Key-Type: DSA
 Key-Length: 1024
-Name-Real: Ubuntu Local Archive One-Time Signing Key
-Name-Email: cdimage@ubuntu.com
+Name-Real: elementary Local Archive One-Time Signing Key
+Name-Email: elementary@elementaryos.org
 Expire-Date: 0
 @@EOF
-		gpg --home gnupg --gen-key --batch < gnupg/NEWKEY \
-			> gnupg/generate.log 2>&1 &
-		GPG_PROCESS=$!
-	fi
+	gpg --home gnupg --gen-key --batch < gnupg/NEWKEY \
+		> gnupg/generate.log 2>&1 &
+	GPG_PROCESS=$!
 
 	lb bootstrap "$@"
 
@@ -49,6 +48,10 @@ EOF
 
 	lb chroot "$@"
 
+    echo "Waiting on gnupg ("$GPG_PROCESS") to finish generating a key."
+	wait $GPG_PROCESS
+    apt-key --keyring chroot/etc/apt/trusted.gpg add gnupg/pubring.gpg
+
 	if [ -d chroot/var/lib/preinstalled-pool ]; then
 		(cd chroot/var/lib/preinstalled-pool/ && apt-ftparchive packages . > Packages)
 		bzip2 -9 -c chroot/var/lib/preinstalled-pool/Packages \
@@ -70,9 +73,6 @@ deb file:/var/lib/preinstalled-pool/ ./
 		mv chroot/etc/apt/sources.list.new chroot/etc/apt/sources.list
 		rm chroot/etc/apt/sources.list.preinstall
 
-		echo "Waiting on gnupg ("$GPG_PROCESS") to finish generating a key."
-		wait $GPG_PROCESS
-
 		R_ORIGIN=$(lsb_release -i -s)
 		R_CODENAME=$(lsb_release -c -s)
 		R_VERSION=$(lsb_release -r -s)
@@ -89,7 +89,6 @@ deb file:/var/lib/preinstalled-pool/ ./
 		gpg --home gnupg --detach-sign --armor gnupg/Release
 		mv gnupg/Release chroot/var/lib/preinstalled-pool/Release
 		mv gnupg/Release.asc chroot/var/lib/preinstalled-pool/Release.gpg
-		apt-key --keyring chroot/etc/apt/trusted.gpg add gnupg/pubring.gpg
 		rm chroot/var/lib/preinstalled-pool/Packages
 	fi
 
@@ -110,6 +109,8 @@ deb file:/var/lib/preinstalled-pool/ ./
 		)
 		echo END fdupes
 	fi
+	
+	mv chroot/pool pool
 
 	lb binary "$@"
 ) 2>&1 | tee binary.log

@@ -4,6 +4,6 @@ set -e
 export LB_LINUX_FLAVOURS="none"
 lb clean noauto "$@"
 
-rm -rf config
+rm -rf config gnupg pool
 rm -f binary.manifest binary.manifest-desktop binary.log binary.iso.md5
 rm -f livecd.*
