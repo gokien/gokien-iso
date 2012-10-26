@@ -33,6 +33,7 @@ mv cache_"$ARCH" cache
 lb clean
 lb config
 lb build
+mv binary-hybrid.iso binary.iso
 md5sum binary.iso > binary.iso.md5
 mkdir -p builds/`date +%Y%m%d`/$ARCH
 mv binary.* builds/`date +%Y%m%d`/$ARCH/

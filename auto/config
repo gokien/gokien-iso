@@ -29,7 +29,7 @@ add_package ()
 
 OPTS=
 COMPONENTS=
-BINARY_IMAGES=iso
+BINARY_IMAGES=iso-hybrid
 MEMTEST=memtest86+
 SOURCE='--source false'
 BOOTLOADER=syslinux
