@@ -60,7 +60,7 @@ ln -s /usr/share/live/build/examples/hooks/all_chroot_pyc-purge.sh config/chroot
 cp auto/hooks/seeds.sh config/chroot_local-hooks/
 cp auto/hooks/fix_lightdm.sh config/chroot_local-hooks/
 cp auto/hooks/fix_syslinux.sh config/binary_local-hooks/
-cp auto/hooks/set_info.sh config/binary_local-hooks/
+cp auto/hooks/info.py config/binary_local-hooks/
 cp auto/hooks/translations.sh config/binary_local-hooks/
 cp auto/hooks/pool.sh config/binary_local-hooks/
 
