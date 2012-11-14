@@ -66,3 +66,7 @@ cp auto/hooks/pool.sh config/binary_local-hooks/
 
 mkdir -p config/archives
 cp auto/archives/* config/archives/
+
+# set ISO properties
+sed -i 's/Ubuntu\ Live/elementary\ OS/' config/binary
+sed -i 's/LB_ISO_VOLUME/LB_ISO_VOLUME\=\"elementary OS\"\n#/' config/binary
