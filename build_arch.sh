@@ -12,7 +12,7 @@ export ARCH=${1:-'i386'}
 export SUITE=${SUITE:-'precise'}
 
 # check for dependencies
-dependency_list='live-build livecd-rootfs syslinux-themes-elementary gfxboot-theme-ubuntu dpkg-dev'
+dependency_list='live-build livecd-rootfs syslinux-themes-elementary gfxboot-theme-ubuntu dpkg-dev syslinux'
 for package in $dependency_list; do
 dpkg -L "$package" >/dev/null 2>&1 || missing_dependencies="$missing_dependencies $package"
 done
