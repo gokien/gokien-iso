@@ -10,6 +10,7 @@ filename=$(basename "$1")
 zsyncmake -e \
 -o "$1"'.zsync' \
 -u 'http://superb-sea2.dl.sourceforge.net/project/elementaryos/unstable/'"$filename" \
+-u 'http://heanet.dl.sourceforge.net/project/elementaryos/unstable/'"$filename" \
 -u 'http://ignum.dl.sourceforge.net/project/elementaryos/unstable/'"$filename" \
 -u 'http://citylan.dl.sourceforge.net/project/elementaryos/unstable/'"$filename" \
 "$1"
