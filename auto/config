@@ -57,16 +57,6 @@ lb config noauto \
 	$OPTS
 
 ln -s /usr/share/live/build/examples/hooks/all_chroot_pyc-purge.sh config/chroot_local-hooks/
-cp auto/hooks/seeds.sh config/chroot_local-hooks/
-cp auto/hooks/fix_lightdm.sh config/chroot_local-hooks/
-cp auto/hooks/fix_syslinux.sh config/binary_local-hooks/
-cp auto/hooks/info.py config/binary_local-hooks/
-cp auto/hooks/translations.sh config/binary_local-hooks/
-cp auto/hooks/pool.sh config/binary_local-hooks/
 
 mkdir -p config/archives
 cp auto/archives/* config/archives/
-
-# set ISO properties
-sed -i 's/Ubuntu\ Live/elementary\ OS/' config/binary
-sed -i 's/LB_ISO_VOLUME/LB_ISO_VOLUME\=\"elementary OS\"\n#/' config/binary

@@ -36,7 +36,8 @@ lb build
 mv binary-hybrid.iso binary.iso
 md5sum binary.iso > binary.iso.md5
 mkdir -p builds/`date +%Y%m%d`/$ARCH
-mv binary.* builds/`date +%Y%m%d`/$ARCH/
+mv binary/casper/filesystem.* builds/`date +%Y%m%d`/$ARCH/
 rm -f livecd*
+rm -f binary.*
 
 mv cache cache_"$ARCH"
