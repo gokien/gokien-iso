@@ -1,15 +1,7 @@
 #!/bin/bash
 
-# check for root permissions
-if [ $(id -u) != 0 ]; then
-echo "Builds scripts need root permissions, but you don't seem to have them.
-Become a local god using sudo, then we'll work together to build the future." > /dev/stderr
-exit 1
-fi
-
-# accept ARCH as parameter; if none given, build i386
-export ARCH=${1:-'i386'}
-export SUITE=${SUITE:-'precise'}
+# load config
+source etc/congrego.conf
 
 # check for dependencies
 dependency_list='live-build livecd-rootfs syslinux-themes-elementary gfxboot-theme-ubuntu dpkg-dev syslinux'
@@ -24,19 +16,28 @@ exit 1
 fi
 
 # We're a lengthy background process, so don't eat too much CPU and disk I/O
-renice '+15' $$ || true
-ionice -c 3 -p $$ || true
+if [[ "$LOW_PRIORITY" == "yes" ]]; then
+	renice '+15' $$ || true
+	ionice -c 3 -p $$ || true
+fi
 
-rm -Rf cache
-mv cache_"$ARCH" cache
+export FSARCH=${1:-'i386'}
+
+mkdir -p tmp/$FSARCH
+
+cd tmp/$FSARCH
+rm -Rf auto
+cp -R ../../etc/auto auto
+
+sed -i "s/@SYSLINUX/$CODENAME/" auto/config
 
 lb clean
 lb config
 lb build
 mv binary-hybrid.iso binary.iso
 md5sum binary.iso > binary.iso.md5
-mkdir -p builds/`date +%Y%m%d`/$ARCH
-mv binary.* builds/`date +%Y%m%d`/$ARCH/
+mkdir -p ../../builds/`date +%Y%m%d`/$FSARCH
+mv binary.* ../../builds/`date +%Y%m%d`/$FSARCH/
 rm -f livecd*
 
-mv cache cache_"$ARCH"
+cd ../..
