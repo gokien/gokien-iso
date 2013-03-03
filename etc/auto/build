@@ -108,8 +108,6 @@ deb file:/var/lib/preinstalled-pool/ ./
 		)
 		echo END fdupes
 	fi
-	
-	mv chroot/pool pool
 
 	lb binary "$@"
 	touch binary.success
@@ -147,7 +145,7 @@ for OUTPUT in ext2 ext3 ext4 manifest manifest-remove size squashfs; do
 	chmod 644 "$PREFIX.$OUTPUT"
 done
 
-for ISO in binary.iso binary-hybrid.iso; do
+for ISO in binary.iso binary.hybrid.iso; do
 	[ -e "$ISO" ] || continue
 	ln "$ISO" "$PREFIX.iso"
 	chmod 644 "$PREFIX.iso"

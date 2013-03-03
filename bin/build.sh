@@ -34,7 +34,7 @@ sed -i "s/@SYSLINUX/$CODENAME/" auto/config
 lb clean
 lb config
 lb build
-mv binary-hybrid.iso binary.iso
+mv binary.hybrid.iso binary.iso
 md5sum binary.iso > binary.iso.md5
 mkdir -p ../../builds/`date +%Y%m%d`/$FSARCH
 mv binary.* ../../builds/`date +%Y%m%d`/$FSARCH/
