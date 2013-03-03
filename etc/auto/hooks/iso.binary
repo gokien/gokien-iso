@@ -1,4 +1,12 @@
 #!/bin/bash
-cd binary
 
-# TODO
+# mount ubuntu's iso and copy everything over except the rootfs
+mkdir -p mnt
+mount -o loop ubuntu.iso mnt
+rsync --exclude=/casper/filesystem.squashfs -a mnt/ binary
+umount mnt
+rm -rf mnt
+
+# replace their init with ours
+cp chroot/boot/vmlinuz-* binary/casper/vmlinuz
+cp chroot/boot/initrd.* binary/casper/initrd.lz

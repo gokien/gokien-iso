@@ -11,10 +11,13 @@ fi
 source etc/congrego.conf
 
 if [[ "$ARCH" == "all" ]]; then
-	$(dirname "$0")/bin/build_fs.sh i386
-	$(dirname "$0")/bin/build_fs.sh amd64
+	$(dirname "$0")/bin/download.sh i386
+	$(dirname "$0")/bin/download.sh amd64
+	$(dirname "$0")/bin/build.sh i386
+	$(dirname "$0")/bin/build.sh amd64
 else
-	$(dirname "$0")/bin/build_fs.sh "$ARCH"
+	$(dirname "$0")/bin/download.sh "$ARCH"
+	$(dirname "$0")/bin/build.sh "$ARCH"
 fi
 
 if [[ "$SOURCEFORGE" == "yes" ]]; then
