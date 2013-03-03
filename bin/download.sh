@@ -4,6 +4,8 @@ source etc/congrego.conf
 
 export DLARCH=${1:-'i386'}
 
+mkdir -p tmp/$DLARCH
+
 cd tmp
 cd $DLARCH
 
