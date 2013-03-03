@@ -11,7 +11,7 @@ cd $DLARCH
 
 if [ ! -f ubuntu.iso ];
 then
-    wget http://releases.ubuntu.com/$SUITE/ubuntu-$BASEVERSION-desktop-$DLARCH.iso
+    wget http://releases.ubuntu.com/$BASECODENAME/ubuntu-$BASEVERSION-desktop-$DLARCH.iso
 	mv ubuntu-$BASEVERSION-desktop-$DLARCH.iso ubuntu.iso
 fi
 

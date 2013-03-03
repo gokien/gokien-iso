@@ -1,7 +1,7 @@
 #! /bin/sh
 set -e
 
-. ../../etc/congrego.conf
+. congrego.conf
 
 rm -rf config
 
@@ -63,7 +63,7 @@ add_chroot_hook remove-udev-persistent-rules
 lb config noauto \
     --architecture "$ARCH" \
 	--mode ubuntu \
-	--distribution "$SUITE" \
+	--distribution "$BASECODENAME" \
 	--bootstrap-keyring ubuntu-keyring \
     --syslinux-theme elementary-@SYSLINUX \
 	--binary-images "$BINARY_IMAGES" \
@@ -92,4 +92,4 @@ sed -i 's/LB_ISO_VOLUME/LB_ISO_VOLUME\=\"elementary OS\"\n#/' config/binary
 
 # replace channel and suite
 sed -i "s/@CHANNEL/$CHANNEL/" config/archives/*.list
-sed -i "s/@SUITE/$SUITE/" config/archives/*.list
+sed -i "s/@BASECODENAME/$BASECODENAME/" config/archives/*.list

@@ -28,7 +28,9 @@ mkdir -p tmp/$FSARCH
 cd tmp/$FSARCH
 rm -Rf auto
 cp -R ../../etc/auto auto
+cp ../../etc/congrego.conf congrego.conf
 
+sed -i "s/all/$FSARCH/" congrego.conf
 sed -i "s/@SYSLINUX/$CODENAME/" auto/config
 
 lb clean
