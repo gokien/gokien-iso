@@ -8,10 +8,10 @@ cf = open("congrego.conf", "r")
 config = cf.read()
 cf.close()
 
-version = config.split('VERSION="')[1]
+version = config.split('\nVERSION="')[1]
 version = version.split('"')[0]
 
-codename = config.split('CODENAME="')[1]
+codename = config.split('\nCODENAME="')[1]
 codename = codename.split('"')[0]
 codename = codename.capitalize()
 

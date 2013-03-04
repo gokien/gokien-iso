@@ -8,7 +8,7 @@ exit 1
 fi
 
 # check for dependencies
-dependency_list='live-build livecd-rootfs syslinux-themes-elementary gfxboot-theme-ubuntu dpkg-dev syslinux'
+dependency_list='live-build syslinux-themes-elementary gfxboot-theme-ubuntu dpkg-dev syslinux zsync'
 for package in $dependency_list; do
 dpkg -L "$package" >/dev/null 2>&1 || missing_dependencies="$missing_dependencies $package"
 done
