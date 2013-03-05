@@ -1,0 +1,25 @@
+#!/bin/bash
+
+source ./congrego.conf
+
+# mount ubuntu's iso and copy everything over except the rootfs
+mkdir -p mnt
+mount -o loop ubuntu.iso mnt
+rsync --exclude=/casper/filesystem.squashfs --exclude=/isolinux --exclude=/casper/vmlinuz --exclude=/casper/initrd.lz --exclude=/wubi.exe --exclude=/autorun.inf --exclude=/md5sum.txt --exclude=/casper/md5sum.txt --exclude=/preseed --exclude=/.disk/info -a mnt/ binary
+umount mnt
+rm -rf mnt
+
+# replace their init with ours
+rm -rf binary/casper/vmlinuz-*
+rm -rf binary/casper/initrd.*
+cp chroot/boot/vmlinuz-* binary/casper/vmlinuz
+cp chroot/boot/initrd.* binary/casper/initrd.lz
+
+# customization
+echo "$CHANGELOG" > binary/.disk/release_notes_url
+sed -i "s/Ubuntu/elementary OS/" binary/boot/grub/loopback.cfg
+sed -i "s/Ubuntu/elementary OS/" binary/README.diskdefines
+sed -i "s/$BASEVERSION/$VERSION/" binary/README.diskdefines
+sed -i "s/LTS//" binary/README.diskdefines
+sed -i "s/\".*\"/\"$CODENAME\"/" binary/README.diskdefines
+rm -rf binary/ubuntu

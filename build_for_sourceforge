@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -e
-
-./build_i386.sh
-./build_amd64.sh
-./prepare-sourceforge-upload.sh
