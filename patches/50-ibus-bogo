@@ -1,0 +1,9 @@
+
+if ! dpkg -s ibus-bogo &> /dev/null; then
+	wget -O - http://bogoengine.github.com/debian/stable/installer.sh | sudo sh
+fi
+
+# Here for now, should really be part of the default-settings package
+echo "/desktop/ibus/general/preload_engines [bogo-python]" > /usr/share/gconf/defaults/50_gokien-default-settings
+
+ln -s /etc/X11/xinit/xinput.d/ibus /etc/X11/xinit/xinput.d/en_US
