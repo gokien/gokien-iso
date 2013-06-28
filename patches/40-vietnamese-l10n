@@ -1,0 +1,4 @@
+apt-get install \
+	language-pack-vi \
+	language-pack-gnome-vi \
+	-y
