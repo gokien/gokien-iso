@@ -1,0 +1,2 @@
+sed -e "s/archive.ubuntu.com/free.nchc.org.tw/g" -i /etc/apt/sources.list
+apt-get update
