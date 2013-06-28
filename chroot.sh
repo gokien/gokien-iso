@@ -11,7 +11,6 @@ mount -t proc none edit/proc
 mount -t sysfs none edit/sys
 mount -t devpts none edit/dev/pts
 
-chroot edit bash install-patches.sh
 chroot edit bash --init-file init.sh
 chroot edit bash uninit.sh
 
