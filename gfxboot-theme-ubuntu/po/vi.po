@@ -399,7 +399,7 @@ msgstr "^Kiểm tra lỗi đĩa"
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_rescue
 msgid "^Rescue a broken system"
-msgstr "Cứ^u một hệ thống bị hỏng"
+msgstr "^Sửa chữa một hệ thống bị hỏng"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_memtest
