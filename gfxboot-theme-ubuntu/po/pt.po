@@ -432,3 +432,11 @@ msgstr "^Instalar o Mythbuntu"
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "^Experimentar o Mythbuntu sem instalar"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""

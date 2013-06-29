@@ -431,3 +431,11 @@ msgstr "^ثبت ميثبونتو"
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "^جرِّب مِثبونتو دون تثبيتها"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""

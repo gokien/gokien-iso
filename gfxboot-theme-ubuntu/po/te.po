@@ -429,3 +429,11 @@ msgstr "^మిథుబుంటును ప్రతిస్థాపిం�
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "^మిథుబుంటును ఇన్స్టాల్ చేయకుండా ప్రయత్నించు"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""

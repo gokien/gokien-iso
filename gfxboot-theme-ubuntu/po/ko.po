@@ -429,3 +429,11 @@ msgstr "미스분투 설치 (^I)"
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "설치하지 않고 미스분투 경험하기 (^T)"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""
