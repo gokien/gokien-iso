@@ -427,3 +427,11 @@ msgstr "മിത്ത്ബുണ്ടു വിന്യസിക്കു�
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "^മിഥ്ബുണ്ടു ഇന്‍സ്റ്റാള്‍ ചെയ്യാതെ ഉപയോഗിച്ച്‌ നോക്കൂ"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""

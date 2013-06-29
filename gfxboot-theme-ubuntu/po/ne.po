@@ -430,3 +430,11 @@ msgstr "माइथबुन्टु प्रतिस्थापन गर�
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "माइथबुन्टु प्रतिस्थापन विना प्रयोग गरी हेर्नुहोस् (^T)"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""

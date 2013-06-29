@@ -67,7 +67,7 @@ msgstr "Bộ nạp khởi động"
 #. error box title
 #. txt_error_title
 msgid "I/O error"
-msgstr "Lỗi I/O (nhập/xuất)"
+msgstr "Lỗi nhập/xuất"
 
 #. boot disk change dialog title
 #. txt_change_disk_title
@@ -143,7 +143,7 @@ msgstr "Mật khẩu\n"
 #. button label for other/more options
 #. txt_other_options
 msgid "Other Options"
-msgstr "Các lựa chọn khác"
+msgstr "Tùy chọn khác"
 
 #. label for language selection
 #. txt_language
@@ -153,7 +153,7 @@ msgstr "Ngôn ngữ"
 #. label for keymap selection
 #. txt_keymap
 msgid "Keymap"
-msgstr "Các phím"
+msgstr "Bàn phím"
 
 #. label for installation mode selection
 #. txt_modes
@@ -173,7 +173,7 @@ msgstr "Chế độ chuyên gia"
 #. title for accessibility menu
 #. txt_access
 msgid "Accessibility"
-msgstr "Hỗ trợ Truy nhập"
+msgstr "Hỗ trợ người khuyết tật"
 
 #. label for accessibility menu
 #. txt_access_none
@@ -223,47 +223,47 @@ msgstr "Mọi thứ"
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_ubuntu
 msgid "^Try Ubuntu without installing"
-msgstr "^Thử Ubuntu không cần cài đặt"
+msgstr "Dùng ^thử Ubuntu không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_kubuntu
 msgid "^Try Kubuntu without installing"
-msgstr "^Thử Kubuntu không cần cài đặt"
+msgstr "Dùng ^thử Kubuntu không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_edubuntu
 msgid "^Try Edubuntu without installing"
-msgstr "^Thử Edubuntu không cần cài đặt"
+msgstr "Dùng ^thử Edubuntu không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_xubuntu
 msgid "^Try Xubuntu without installing"
-msgstr "^Thử Xubuntu không cần cài đặt"
+msgstr "Dùng ^thử Xubuntu không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_ubuntu_mid
 msgid "^Try Ubuntu MID without installing"
-msgstr "^Thử Ubuntu MID không cần cài đặt"
+msgstr "Dùng ^thử Ubuntu MID không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_ubuntu_netbook
 msgid "^Try Ubuntu Netbook without installing"
-msgstr "^Thử Ubuntu Netbook không cần cài đặt"
+msgstr "Dùng ^thử Ubuntu Netbook không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_kubuntu_netbook
 msgid "^Try Kubuntu Netbook without installing"
-msgstr "^Thử Kubuntu Netbook không cần cài đặt"
+msgstr "Dùng ^thử Kubuntu Netbook không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_lubuntu
 msgid "^Try Lubuntu without installing"
-msgstr "^Dùng thử Lubuntu mà không cài đặt"
+msgstr "^Dùng thử Lubuntu mà không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_start_kubuntu
 msgid "^Start Kubuntu"
-msgstr "^Bắt đầu Kubuntu"
+msgstr "^Khởi động Kubuntu"
 
 #. Installation mode.
 #. txt_menuitem_driverupdates
@@ -399,7 +399,7 @@ msgstr "^Kiểm tra lỗi đĩa"
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_rescue
 msgid "^Rescue a broken system"
-msgstr "Cứ^u một hệ thống bị hỏng"
+msgstr "^Sửa chữa một hệ thống bị hỏng"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_memtest
@@ -414,7 +414,7 @@ msgstr "K^hởi động từ đĩa cứng đầu tiên"
 #. Boot option.
 #. txt_option_free
 msgid "Free software only"
-msgstr "Chỉ phần mềm miễn phí"
+msgstr "Chỉ phần mềm tự do nguồn mở"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_dell_factory_recovery
@@ -429,4 +429,12 @@ msgstr "^Cài đặt Mythbuntu"
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
-msgstr "^Thử Mythbuntu không cần cài đặt"
+msgstr "Dùng ^thử Mythbuntu không cần cài đặt"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr "^Cài đặt Gokien"
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr "Dùng ^thử Gokien không cần cài đặt"

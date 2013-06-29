@@ -431,3 +431,11 @@ msgstr "Mythbuntu ಸ್ಥಾಪಿಸಿ"
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "Mythbuntuವನ್ನು ಅನುಸ್ಥಾಪಿಸದೆ ಪ್ರಯತ್ನಿಸಿ (^)"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""

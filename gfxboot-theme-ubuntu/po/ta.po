@@ -433,3 +433,11 @@ msgstr "மித்-உபுண்டுவை நிறுவுக"
 #. txt_menuitem_live_mythbuntu
 msgid "^Try Mythbuntu without installing"
 msgstr "^நிறுவாமல் மித்புண்டுவை முயற்சிக்கவும்"
+
+#. txt_menuitem_install_gokien
+msgid "^Install Gokien"
+msgstr ""
+
+#. txt_menuitem_live_gokien
+msgid "^Try Gokien without installing"
+msgstr ""
