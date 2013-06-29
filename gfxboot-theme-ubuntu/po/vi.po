@@ -414,7 +414,7 @@ msgstr "K^hởi động từ đĩa cứng đầu tiên"
 #. Boot option.
 #. txt_option_free
 msgid "Free software only"
-msgstr "Chỉ phần mềm miễn phí"
+msgstr "Chỉ phần mềm tự do nguồn mở"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_dell_factory_recovery
