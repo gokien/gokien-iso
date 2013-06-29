@@ -11,9 +11,8 @@ sudo mksquashfs edit extract-cd/casper/filesystem.squashfs
 
 cp lib/README.diskdefines extract-cd/README.diskdefines
 
-cp -f lib/isolinux.cfg lib/txt.cfg extract-cd/isolinux/
-
 cd extract-cd
+echo vi > isolinux/lang
 find -type f -print0 | sudo xargs -0 sha256sum | grep -v isolinux/boot.cat | sudo tee SHA256SUMS
 
 sudo mkisofs -D -r -V "$IMAGE_NAME" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../gokien.iso .
