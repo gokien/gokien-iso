@@ -2,3 +2,8 @@ edit/
 extract-cd/
 elementary.iso
 gokien.iso
+gfxboot-theme-ubuntu/boot
+gfxboot-theme-ubuntu/install
+gfxboot-theme-ubuntu/po/*.tr
+mnt/
+/gfxboot-theme-ubuntu/po/text.inc
