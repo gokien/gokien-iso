@@ -258,12 +258,12 @@ msgstr "Dùng ^thử Kubuntu Netbook không cần cài đặt"
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_live_lubuntu
 msgid "^Try Lubuntu without installing"
-msgstr "^Dùng thử Lubuntu mà không cài đặt"
+msgstr "^Dùng thử Lubuntu mà không cần cài đặt"
 
 #. Boot menu item; a ^ prefix indicates a unique accelerator key.
 #. txt_menuitem_start_kubuntu
 msgid "^Start Kubuntu"
-msgstr "^Bắt đầu Kubuntu"
+msgstr "^Khởi động Kubuntu"
 
 #. Installation mode.
 #. txt_menuitem_driverupdates
