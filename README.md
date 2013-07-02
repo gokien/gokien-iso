@@ -10,9 +10,13 @@ The architecture (amd64 or i386) to be stored on the LiveCD should be the same a
 
 ## Steps to create a bootable iso
 
+All commands must be run with root permission.
+
 1. Download an official Elementary iso and copy it to this directory, renamed as **elementary.iso**.
 2. Run `./extract-iso.sh`<br>
    Now we have `./extract-cd` which contains the metadata and `./edit` which holds the iso's chroot.
 3. Run `./chroot.sh` and make customizations inside that chroot.
 4. When you're done. Press **Control-D** to exit cleanly.
 5. Run `./gen-iso.sh` to create the final iso, named as **gokien.iso**.
+
+Alternately, the last step can be replaced with running `./quick-gen-iso.sh`, which does not compress `./edit` into `extract-cd/casper/filesystem.squashfs` (computationally heavy).
