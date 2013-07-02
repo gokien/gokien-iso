@@ -28,5 +28,8 @@ function gen_iso {
 	find -type f -print0 | sudo xargs -0 sha256sum | grep -v isolinux/boot.cat | sudo tee SHA256SUMS
 
 	sudo mkisofs -D -r -V "$IMAGE_NAME" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../gokien.iso .
+	
+	sudo isohybrid ../gokien.iso
+
 	cd $_PWD
 }
