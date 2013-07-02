@@ -4,7 +4,7 @@ These scripts are created based on the instructions given in this [tutorial](htt
 
 ## Requirements
 
-	sudo apt-get install squashfs-tools genisoimage
+	sudo apt-get install squashfs-tools genisoimage gfxboot-dev
 
 The architecture (amd64 or i386) to be stored on the LiveCD should be the same as the architecture used to perform the customization, or the LiveCD may not run. It is not trivial to customize an AMD64 LiveCD using an i386 operating system, for example.
 
