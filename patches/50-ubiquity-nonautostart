@@ -1,0 +1,2 @@
+rm /etc/init/ubiquity.conf
+
