@@ -1,0 +1,6 @@
+APP_LIST="firefox \
+          clementine \
+          synaptic \
+          gdebi"
+
+apt-get install -y $APP_LIST
