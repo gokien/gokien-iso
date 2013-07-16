@@ -1,0 +1,5 @@
+LIST="base-files \
+	  gokien-default-settings"
+
+apt-get install -y gokien-os-overlay
+apt-get install -y $LIST
