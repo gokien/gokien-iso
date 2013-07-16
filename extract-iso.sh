@@ -10,3 +10,4 @@ sudo unsquashfs mnt/casper/filesystem.squashfs
 sudo mv squashfs-root edit
 
 sudo umount mnt
+sudo rm -Rf mnt
