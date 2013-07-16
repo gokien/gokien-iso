@@ -1,0 +1,7 @@
+BASE_URL=http://gokien.github.io/debian-repo
+
+echo "deb $BASE_URL precise main universe
+deb-src $BASE_URL precise main universe" > /etc/apt/sources.list.d/gokien-daily.list
+
+echo "Adding our signing key..."
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C0DAAD97
